@@ -33,4 +33,4 @@ tv_delaymapchange 1
 sv_coaching_enabled 1
 {% endif %}
 
-exec rules_{{ item.value.rules | default('esl5on5') }}.cfg
+exec {{ item.value.rules | default('esl5on5') }}.cfg
