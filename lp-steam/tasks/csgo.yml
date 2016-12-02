@@ -19,19 +19,14 @@
     owner: "{{ steamcmd_user }}"
     group: "{{ steamcmd_user }}"
 
-- name: CSGO | Install fom cfg
-  template:
-    src: csgo/fom.j2
-    dest: "{{ steamcmd_path }}/games/csgo/csgo/cfg/fom.cfg"
+- name: CSGO | esl5on5 convenience symlink
+  file:
+    state: link
+    src: "{{ steamcmd_path }}/games/csgo/csgo/cfg/rules_esl5on5.cfg"
+    dest: "{{ steamcmd_path }}/games/csgo/csgo/cfg/esl5on5.cfg"
     owner: "{{ steamcmd_user }}"
     group: "{{ steamcmd_user }}"
 
-- name: CSGO | No bots in game
-  lineinfile:
-    dest: "{{ steamcmd_path }}/games/csgo/csgo/cfg/gamemode_competitive.cfg"
-    regexp: "^bot_quota"
-    line: "bot_quota 0"
-  
 - name: CSGO | Download CSay
   get_url:
     url: "{{ steam_csay_url }}"
