@@ -22,8 +22,8 @@
 - name: CSGO | esl5on5 convenience symlink
   file:
     state: link
-    src: "{{ steamcmd_path }}/games/csgo/csgo/cfg/rules_esl5on5.cfg"
-    dest: "{{ steamcmd_path }}/games/csgo/csgo/cfg/esl5on5.cfg"
+    src: "{{ steamcmd_path }}/games/csgo/csgo/cfg/esl5on5.cfg"
+    dest: "{{ steamcmd_path }}/games/csgo/csgo/cfg/rules_esl5on5.cfg"
     owner: "{{ steamcmd_user }}"
     group: "{{ steamcmd_user }}"
 
