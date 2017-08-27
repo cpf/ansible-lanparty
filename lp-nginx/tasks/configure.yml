@@ -17,8 +17,9 @@
 - name: Nginx | Render htpasswd
   template:
     src: htpasswd.j2
-    dest: /et/nginx/htpasswd
+    dest: /etc/nginx/htpasswd
   notify: reload nginx
+  when: nginx_users is defined
 
 - name: Nginx | Render Defaults
   template:
