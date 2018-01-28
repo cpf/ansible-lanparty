@@ -59,6 +59,7 @@ depot_sites:
       - cs.steampowered.com
       - clientconfig.akamai.steamstatic.com
       - hsar.steampowered.com.edgesuite.net
+      - steampipe.akamaized.net
   origin:
     domains:
       - origin-a.akamaihd.net
@@ -72,6 +73,10 @@ depot_sites:
       - blzddist1-a.akamaihd.net
       - blzddist2-a.akamaihd.net
       - dist.blizzard.com.edgesuite.net
+  blizzard_api:
+    size: 100m
+    domains:
+      - patch.battle.net
   nvidia:
     size: 10g
     domains:
